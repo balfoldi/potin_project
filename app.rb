@@ -12,6 +12,7 @@ require 'bundler'
 require 'lib/router.rb'
 require 'lib/controller.rb'
 Bundler.require
+$:.unshift File.expand_path("./../lib", __FILE__)
 
 routin = Router.new
 
