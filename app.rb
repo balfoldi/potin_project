@@ -9,12 +9,15 @@ require 'open-uri'
 require 'time'
 require 'date'
 require 'bundler'
-require 'lib/router.rb'
-require 'lib/controller.rb'
 Bundler.require
 $:.unshift File.expand_path("./../lib", __FILE__)
 
-routin = Router.new
+require 'router'
+require 'controller'
+require 'view'
+require 'gossip'
+
+routin = Router.new #creation d'une instancede classe
 
 routin.perform
 
